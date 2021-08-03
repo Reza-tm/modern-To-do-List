@@ -5,22 +5,31 @@ let animation = document.querySelector(".anime")
 let todoAnimation = document.querySelector(".todoAnime")
 let backBtn = document.querySelector('.closeBtn')
 let frontBtn = document.querySelector('.jeloBtn')
+let closeAnimation =document.querySelector('.anime-close')
+let todoSection = document.querySelector('#todoAll')
 //Add listeners
 
     frontBtn.addEventListener('click' , (e)=>{
         openAnimation()
     })
-
+    frontBtn.addEventListener('click' , (e)=>{
+        setTimeout (nameAnimation , 800)
+    },{once : true })
 
 backBtn.addEventListener('click' ,  ()=>{
-    allContainer.classList.add('allContainer') ;
-    allContainer.classList.remove('allContainerChange') ;
-    allContainer.style.filter = 'blur(3px)' ;
     todoAnimation.classList.remove('animate__zoomInUp')
-    todoAnimation.classList.add('hidden')
-    animation.classList.add('hidden') ,
     animation.classList.remove('animate__zoomInUp')
     backBtn.classList.remove('backBtn')
+    closeAnimation.classList.add('animate__zoomOutDown')
+    todoSection.classList.add('animate__zoomOutDown')
+    setTimeout(()=>{
+        allContainer.style.filter = 'blur(3px)' ;
+        allContainer.classList.remove('allContainerChange') ;
+        allContainer.classList.add('allContainer') ;
+    },800)
+    
+    // todoAnimation.classList.add('animate__zoomOutDown')
+ 
 })
 //Animation 
 function nameAnimation () {
@@ -63,7 +72,6 @@ function openAnimation (){
     allContainer.classList.remove('allContainer') ;
     allContainer.classList.add('allContainerChange');
     allContainer.style.filter = 'blur(0)' ;
-    setTimeout (nameAnimation , 800)
     todoAnimation.classList.add('animate__zoomInUp')
     setTimeout(()=>{
         todoAnimation.classList.remove('hidden')
@@ -71,4 +79,6 @@ function openAnimation (){
     animation.classList.remove('hidden') ,
     animation.classList.add('animate__zoomInUp')
     backBtn.classList.add('backBtn')
+    closeAnimation.classList.remove('animate__zoomOutDown')
+    todoSection.classList.remove('animate__zoomOutDown')
 }

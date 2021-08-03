@@ -13,17 +13,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="flex justify-center">
-    <div class="mobile rounded-3xl mt-32 relative overflow-hidden">
+    <div class="mobile rounded-3xl mt-32 mb-32 relative overflow-hidden">
         
         <div class="">
 
 
-            <div class="picCircle mt-10 ml-8 relative rounded-full">
-                <div class="userPic absolute rounded-full overflow-hidden"></div>
+            <div class="grid grid-cols-3 grid-rows-3">
+                <div class="col-span-2 row-span-3 picCircle mt-10 ml-8 relative rounded-full">
+                    <div class="userPic  absolute rounded-full overflow-hidden"></div>
+                </div>
+                <div class="openBtn col-start-3 row-start-2 row-end-3  h-8 w-8 relative ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute cursor-pointer jeloBtn h-6 w-6 " viewBox="0 0 20 20" fill="white">
+                        <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                      </svg>
+                </div>
             </div>
-            <svg  xmlns="http://www.w3.org/2000/svg" class="absolute cursor-pointer jeloBtn ml-16 mt-5 h-12 w-12s opacity-60 transition hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="#db0af7">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
-              </svg>
 
             <div class="userName">
                 <h1 class="firstName text-white ml-10 mt-8 text-2xl">reza</h1>
@@ -70,17 +74,16 @@
             
             <div class="allContainer  blur-sm overflow-hidden  rounded-3xl absolute pt-10 py-6 px-4 ">
                 
-                <!-- kiiiir -->
                 <p class="todoHeader font-bold text-xl ml4 mt-12 mb-2 grid-col"><span class="letters letters-1">Whats up</span><span class="letters letters-2">Reza !</span></p>
                 
                 <div  class="">
-                    <div class="categorie animate__animated anime hidden">
+                    <div class="categorie animate__animated anime anime-close hidden">
                         <p class="categorietext uppercase text-xs opacity-40 ml-1 mt-32">categories</p>
 
 
-                        <div class="categorieSelection owl-carousel owl-theme ml-1 mt-6"> 
+                        <div class="categorieSelection owl-carouseeel owl-theme ml-1 mt-6"> 
  
-                            <div class="categoryBox bg-white rounded-xl  px-2 py-2 w-32 interesting flex flex-col justify-between">
+                            <div class="animate__animated  anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
                                 <p class="categoryNum opacity-40 text-xs">3 tasks</p>
                                 <p class="categoryName">Intesting</p>
                             <div class="categoryProgress bg-gray-400 mt-2 w-full rounded-full ov ">
@@ -88,7 +91,7 @@
                             </div>
                             </div>
 
-                        <div class="categoryBox bg-white rounded-xl  px-2 py-2 w-32 favorite flex flex-col justify-between">
+                        <div class="animate__animated  anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
                             <p class="categoryNum opacity-40 text-xs">8 tasks</p>
                             <p class="categoryName">favorite</p>
                             <div class="categoryProgress bg-gray-400 mt-2 w-full rounded-full ">
@@ -96,9 +99,18 @@
                             </div>
                         </div>
 
-                        <div class="categoryBox bg-white rounded-xl  px-2 py-2 w-32 favorite flex flex-col justify-between">
-                            <p class="categoryNum opacity-40 text-xs">8 tasks</p>
-                            <p class="categoryName">favorite</p>
+                        <div class="animate__animated  anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
+                            <p class="categoryNum opacity-40 text-xs">5 tasks</p>
+                            <p class="categoryName">done</p>
+                            <div class="categoryProgress bg-gray-400 mt-2 w-full rounded-full ">
+                                <div class="progressFull purple  rounded-full w-4/12 h-1 "></div>
+                            </div>
+                        </div> 
+
+                        
+                        <div class="animate__animated  anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
+                            <p class="categoryNum opacity-40 text-xs">4 tasks</p>
+                            <p class="categoryName">Uncomplete</p>
                             <div class="categoryProgress bg-gray-400 mt-2 w-full rounded-full ">
                                 <div class="progressFull blue  rounded-full w-4/12 h-1 "></div>
                             </div>
@@ -107,11 +119,34 @@
                     </div>
 
                 </div>
-                <div class="todos animate__animated todoAnime hidden">
+
+
+                <div id="todoAll" class="todos animate__animated  todoAnime  hidden">
                     <p class="uppercase ml-1 mt-7 opacity-40">lorem tasks</p>
 
-                    <div class="todoWrapper owl-carouseel owl-theme w-full">
-                    <div class="todo w-full bg-white mt-3 py-2 rounded-2xl flex items-center px-1">
+                    <div class="todoWrapper owl-theme owl-carouseel  w-full flex">
+
+
+                        <div class="todo w-full bg-white mt-3 py-2 rounded-2xl flex items-center px-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-purple h-6 w-6 flex-shrink-0 mr-2 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="#db0af7">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            <p class="todoText text-center">eserunt sunt in excepturi architecto eos! ipsum dolor sit, amet consectetu</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-blue h-6 w-6 flex-shrink-0 ml-2 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="#1c67d8">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                        </div>
+
+                        <div class="todo w-full bg-white mt-3 py-2 rounded-2xl flex items-center px-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-purple h-6 w-6 flex-shrink-0 mr-2 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="#db0af7">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            <p class="todoText text-center">eserunt sunt in excepturi architecto eos! ipsum dolor sit, amet consectetu</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-blue h-6 w-6 flex-shrink-0 ml-2 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="#1c67d8">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                        </div>
+                        <div class="todo w-full bg-white mt-3 py-2 rounded-2xl flex items-center px-1">
                             <svg xmlns="http://www.w3.org/2000/svg" class="btn-purple h-6 w-6 flex-shrink-0 mr-2 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="#db0af7">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
@@ -120,21 +155,29 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                     </div>
+
                     </div>
 
 
                 </div>
 
+                
+                <div class="absolute top-6 left-3">
+                    <div class="h-8 w-8 relative closeBtn ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="closeBtnIcon  h-6 w-6 absolute absolute-mid" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                          </svg>
+                    </div>
+                </div>
 
-                <svg xmlns="http://www.w3.org/2000/svg" class="closeBtn h-12 w-12 absolute top-6 left-3" fill="none" viewBox="0 0 24 24" stroke="#1c67d8">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+                <button class="absolute top-6 right-3">
+                    <div class="h-8 w-8 relative addBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="addBtnIcon absolute h-6 w-6 absolute-mid" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </button>
 
-            <div class="addBtn flex">
-                <button class="absolute bottom-6 right-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="#1c67d8">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg></button>
-            </div>
         </div>
     </div>
 
