@@ -1,4 +1,42 @@
-
+//data
+let todoData = {
+    firstName : "Reza" ,
+    lastName : "Sobhgol",
+    interestingNum : 31 ,
+    favoriteNum : 81 ,
+    doneNum : 51,
+    uncompleteNum : 51 ,
+}
+// TextContent
+//FullName
+let firstName = document.querySelector('.firstName') ;
+firstName.textContent = todoData.firstName
+let lastName = document.querySelector('.lastName');
+lastName.textContent = todoData.lastName
+//Categories number
+let interstingNum = document.querySelector('.interstingNum')
+interstingNum.textContent = todoData.interestingNum
+let favoriteNum  = document.querySelector('.favoriteNum')
+favoriteNum.textContent = todoData.favoriteNum
+let doneNum  = document.querySelector('.doneNum')
+doneNum.textContent = todoData.doneNum
+let uncompleteNum  = document.querySelector('.uncompleteNum')
+uncompleteNum.textContent = todoData.uncompleteNum
+//consistency
+consistencyfunc(todoData.doneNum , todoData.uncompleteNum)
+function consistencyfunc (finish , unfinish){
+    let resaultIcon = document.querySelector('.consistencyIcon') 
+    if(finish < unfinish){
+        resaultIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="#EF4444">
+        <path fill-rule="evenodd" d="M12 13a1 1 0 100 2h5a1 1 0 001-1V9a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 00-1.414 0L8 9.586 3.707 5.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0L11 9.414 14.586 13H12z" clip-rule="evenodd" />
+      </svg><p class="consistency text-xs opacity-40">Bad</p>` ;
+    } else{
+        resaultIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="#6EE7B7">
+        <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+    </svg>
+    <p class="consistency text-xs opacity-40">Good</p>` ;
+    }
+}
 // variables
 let allContainer = document.querySelector('.allContainer');
 let animation = document.querySelector(".anime")
@@ -7,7 +45,9 @@ let backBtn = document.querySelector('.closeBtn')
 let frontBtn = document.querySelector('.jeloBtn')
 let closeAnimation =document.querySelector('.anime-close')
 let todoSection = document.querySelector('#todoAll')
+
 //Add listeners
+
 
     frontBtn.addEventListener('click' , (e)=>{
         openAnimation()
@@ -27,9 +67,6 @@ backBtn.addEventListener('click' ,  ()=>{
         allContainer.classList.remove('allContainerChange') ;
         allContainer.classList.add('allContainer') ;
     },800)
-    
-    // todoAnimation.classList.add('animate__zoomOutDown')
- 
 })
 //Animation 
 function nameAnimation () {

@@ -170,8 +170,7 @@ body {
 .blur-sm {
   filter: blur(2px);
 }
-
-.todoWrapper {
+.todoWrapper div:nth-child() .todoWrapper {
   display: flex;
 }
 .todo {
@@ -210,6 +209,31 @@ body {
 }
 .addBtnIcon {
   transition: 0.2s ease-in-out;
+}
+.todoBtn {
+  border-radius: 50%;
+  border: 2px solid;
+}
+.todoBtnPurple {
+  margin-left: 3px;
+  border-color: #db0af7;
+  box-shadow: 0 0 5px#db0af7ad;
+}
+.todoBtnBlue {
+  margin-right: 3px;
+  border-color: #1c67d8;
+  box-shadow: 0 0 5px #1c67d8b7;
+}
+.RezaTm {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-size: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+  font-family: Rsemi;
+  opacity: 70%;
 }
 /* js and css */
 .allContainerChange {

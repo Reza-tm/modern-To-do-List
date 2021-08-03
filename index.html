@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="flex justify-center">
+    <!-- down is place of ovh -->
     <div class="mobile rounded-3xl mt-32 mb-32 relative overflow-hidden">
         
         <div class="">
@@ -39,34 +40,33 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
                     </svg>
-                    <div class="items-baseline flex"><p class="userAge tracking-wide opacity-60">intresting </p><span class="text-sm ml-2 opacity-40">3</span> </div>
+                    <div class="items-baseline flex"><p class="userAge tracking-wide opacity-60">intresting </p><span class="interstingNum text-sm ml-2 opacity-40">3</span> </div>
                 </div>
                 <div class="age flex flex items-center mt-3">
                     <svg xmlns="http://www.w3.org/2000/svg" class="opacity-70 h-4 w-4 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
-                    <div class="items-baseline flex"><p class="userAge tracking-wide opacity-60">favorite</p><span class="text-sm ml-2 opacity-40">8</span> </div>
+                    <div class="items-baseline flex"><p class="userAge tracking-wide opacity-60">favorite</p><span class="favoriteNum text-sm ml-2 opacity-40">8</span> </div>
                 </div>
                 
                 <div class="age flex flex items-center mt-3">
                     <svg xmlns="http://www.w3.org/2000/svg" class="opacity-70 h-4 w-4 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
-                      <div class="items-baseline flex"><p class="userAge tracking-wide opacity-60"> done</p><span class="text-sm ml-2 opacity-40">5</span> </div>
+                      <div class="items-baseline flex"><p class="userAge tracking-wide opacity-60"> done</p><span class="doneNum text-sm ml-2 opacity-40">5</span> </div>
                     </div>
                     <div class="age flex flex items-center mt-3">
                         <svg xmlns="http://www.w3.org/2000/svg" class="opacity-70 h-4 w-4 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                         </svg>
-                        <div class="items-baseline flex"><p class="userAge tracking-wide opacity-60"> Uncomplete</p><span class="text-sm ml-2 opacity-40">5</span> </div>
+                        <div class="items-baseline flex"><p class="userAge tracking-wide opacity-60"> Uncomplete</p><span class="uncompleteNum text-sm ml-2 opacity-40">5</span> </div>
                     </div>
                 </div>
                 <div class="mt-3 ml-10 resault text-white">
                     <div class="resaultIcon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" viewBox="0 0 20 20" fill="#6EE7B7">
-                            <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
-                        </svg>
-                        <p class="text-xs opacity-40">Good</p>
+                        <div class="consistencyIcon">
+                            
+                        </div>
                         <h1 class="consistency mt-0">consistency</h1>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                             <div class="animate__animated  anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
                                 <p class="categoryNum opacity-40 text-xs">3 tasks</p>
                                 <p class="categoryName">Intesting</p>
-                            <div class="categoryProgress bg-gray-400 mt-2 w-full rounded-full ov ">
+                            <div class="categoryProgress bg-gray-400 mt-2 w-full rounded-full ">
                                 <div class="progressFull purple w-4/12 h-1 "></div>
                             </div>
                             </div>
@@ -128,38 +128,53 @@
 
 
                         <div class="todo w-full bg-white mt-3 py-2 rounded-2xl flex items-center px-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-purple h-6 w-6 flex-shrink-0 mr-2 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="#db0af7">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            <p class="todoText text-center">eserunt sunt in excepturi architecto eos! ipsum dolor sit, amet consectetu</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-blue h-6 w-6 flex-shrink-0 ml-2 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="#1c67d8">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
+                            <div class="todoBtn todoBtnPurple">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-purple h-4 w-4 flex-shrink-0  cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
+                                  </svg>
+                            </div>
+                            <p class="mx-2 todoText text-center">eserunt sunt in excepturi architecto eos! ipsum dolor sit, amet consectetu</p>
+                            <div class="todoBtn todoBtnBlue">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-blue h-4 w-4 flex-shrink-0  cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                  </svg>
+                            </div>
                         </div>
 
                         <div class="todo w-full bg-white mt-3 py-2 rounded-2xl flex items-center px-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-purple h-6 w-6 flex-shrink-0 mr-2 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="#db0af7">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            <p class="todoText text-center">eserunt sunt in excepturi architecto eos! ipsum dolor sit, amet consectetu</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-blue h-6 w-6 flex-shrink-0 ml-2 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="#1c67d8">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
+                            <div class="todoBtn todoBtnPurple">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-purple h-4 w-4 flex-shrink-0  cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
+                                  </svg>
+                            </div>
+                            <p class="mx-2 todoText text-center">eserunt sunt in excepturi architecto eos! ipsum dolor sit, amet consectetu</p>
+                            <div class="todoBtn todoBtnBlue">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-blue h-4 w-4 flex-shrink-0  cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                  </svg>
+                            </div>
                         </div>
+
                         <div class="todo w-full bg-white mt-3 py-2 rounded-2xl flex items-center px-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="btn-purple h-6 w-6 flex-shrink-0 mr-2 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="#db0af7">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        <p class="todoText text-center">eserunt sunt in excepturi architecto eos! ipsum dolor sit, amet consectetu</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="btn-blue h-6 w-6 flex-shrink-0 ml-2 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="#1c67d8">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                    </div>
+                            <div class="todoBtn todoBtnPurple">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-purple h-4 w-4 flex-shrink-0  cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
+                                  </svg>
+                            </div>
+                            <p class="mx-2 todoText text-center">eserunt sunt in excepturi architecto eos! ipsum dolor sit, amet consectetu</p>
+                            <div class="todoBtn todoBtnBlue">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="btn-blue h-4 w-4 flex-shrink-0  cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                  </svg>
+                            </div>
+                        </div>
+
 
                     </div>
 
 
                 </div>
+                <div class="absolute bottom-0 RezaTm">Designed By <br><a href="">Reza-Tm</a></div>
 
                 
                 <div class="absolute top-6 left-3">
