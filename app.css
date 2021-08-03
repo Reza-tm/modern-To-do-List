@@ -1,0 +1,172 @@
+@import url(fonts.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
+/* mobile */
+.blur {
+  filter: blur(5px);
+}
+
+/* fonts */
+.selections {
+  font-size: 14px;
+}
+.todoHeader {
+  font-family: rBold;
+}
+.categorietext {
+  font-family: rSemi;
+  font-size: 10px;
+}
+.todos p {
+  font-family: rSemi;
+  font-size: 10px;
+}
+.categoryName {
+  font-family: rSemi;
+}
+.todoText {
+  font-family: rRegular !important;
+}
+/*  */
+body {
+  background-color: #d7def6;
+  font-family: rRegular;
+}
+
+.mobile {
+  background-color: #0e1f54;
+  width: 280px;
+  height: 531px;
+}
+
+.userPic {
+  background-image: url(IMG/2213424.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.picCircle {
+  transform: rotate(43deg);
+  width: 74px;
+  height: 74px;
+  border: 3px solid;
+  border-color: #db0af7 #db0af7 #354875 #354875;
+}
+
+.firstName,
+.lastName {
+  font-family: rBold;
+  text-transform: capitalize;
+}
+
+.fa-laugh-wink {
+  font-size: 50px;
+}
+
+.consistency {
+  font-family: rsemi;
+}
+
+/* all container */
+
+.allContainer {
+  background-color: #eef3fd;
+  width: 250px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(40%, -50%);
+  transition: 0.3s ease-in-out;
+  user-select: none;
+}
+
+.ml4 {
+  position: relative;
+  font-weight: 900;
+  font-size: 2.5em;
+}
+.ml4 .letters {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0.3em;
+  right: 0;
+  opacity: 0;
+}
+
+.categorieSelection {
+  display: flex;
+}
+
+.categoryBox {
+  height: 4.5rem;
+  flex-shrink: 0;
+  margin-right: 8px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+}
+.categoryProgress {
+  height: 2px;
+}
+
+.progressFull {
+  position: relative;
+  height: 100%;
+  border-radius: 100%;
+}
+.progressFull::after {
+  content: "";
+  height: 3px;
+  width: 2px;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: -2px;
+}
+.purple,
+.purple::after {
+  background-color: #db0af7;
+  box-shadow: 0 0 8px #db0af7;
+}
+
+.blue,
+.blue::after {
+  background-color: #1c67d8;
+  box-shadow: 0 0 9px #1c67d8;
+}
+.blur-sm {
+  filter: blur(2px);
+}
+
+/* js and css */
+.allContainerChange {
+  background-color: #eef3fd;
+  width: 250px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.8s ease-in-out;
+  box-shadow: 0 0 25px 5px #db0af78c;
+}
+
+.backBtn {
+  cursor: pointer;
+}
+
+.owl-dots {
+  display: none;
+}
+.owl-nav {
+  display: none;
+}
+
+.jeloBtn {
+  top: 20px;
+  right: 55px;
+}

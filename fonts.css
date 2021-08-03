@@ -1,0 +1,40 @@
+@font-face {
+  font-family: rBlack;
+  src: url(Fonts/Montserrat-Black.ttf);
+}
+@font-face {
+  font-family: rBold;
+  src: url(Fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: rXBlack;
+  src: url(Fonts/Raleway-Thin.ttf);
+}
+@font-face {
+  font-family: rXlight;
+  src: url(Fonts/Montserrat-ExtraLight.ttf);
+}
+@font-face {
+  font-family: rlight;
+  src: url(Fonts/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: ritalic;
+  src: url(Fonts/Montserrat-Italic.ttf);
+}
+@font-face {
+  font-family: rRegular;
+  src: url(Fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: rSemi;
+  src: url(Fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: rThin;
+  src: url(Fonts/Montserrat-Thin.ttf);
+}
+@font-face {
+  font-family: rMedium;
+  src: url(Fonts/Montserrat-Medium.ttf);
+}
