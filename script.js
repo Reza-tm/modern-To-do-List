@@ -41,32 +41,37 @@ function consistencyfunc (finish , unfinish){
 let allContainer = document.querySelector('.allContainer');
 let animation = document.querySelector(".anime")
 let todoAnimation = document.querySelector(".todoAnime")
-let backBtn = document.querySelector('.closeBtn')
+let backBtn = document.querySelector('.closeBtnIcon')
 let frontBtn = document.querySelector('.jeloBtn')
 let closeAnimation =document.querySelector('.anime-close')
 let todoSection = document.querySelector('#todoAll')
-
+let designer = document.querySelector('.RezaTm')
+let todoModalBase = document.querySelector('.TodoModal')
+let  addTodoBtn = document.querySelector('.addBtnIcon')
+let  closeTodoBtn = document.querySelector('.todoModalClose')
 //Add listeners
-
-
-    frontBtn.addEventListener('click' , (e)=>{
-        openAnimation()
-    })
-    frontBtn.addEventListener('click' , (e)=>{
-        setTimeout (nameAnimation , 800)
-    },{once : true })
-
-backBtn.addEventListener('click' ,  ()=>{
-    todoAnimation.classList.remove('animate__zoomInUp')
-    animation.classList.remove('animate__zoomInUp')
-    backBtn.classList.remove('backBtn')
-    closeAnimation.classList.add('animate__zoomOutDown')
-    todoSection.classList.add('animate__zoomOutDown')
+frontBtn.addEventListener('click' , (e)=>{
+    openAnimation()
+})
+frontBtn.addEventListener('click' , (e)=>{
+    setTimeout (nameAnimation , 800)
+},{once : true })
+backBtn.addEventListener('click' ,  (e)=>{
+    closeAnimationFunc()
+})
+addTodoBtn.addEventListener('click' , ()=>{
+    todoModalBase.classList.add('todoModalChange')
+    allContainer.classList.remove('shadowPurple')
+    allContainer.classList.add('shadowBlue')
+    closeTodoBtn.style.transform= 'rotate(90deg)'
+})
+closeTodoBtn.addEventListener('click' , ()=>{
+    closeTodoBtn.style.transform= 'rotate(45deg)'
     setTimeout(()=>{
-        allContainer.style.filter = 'blur(3px)' ;
-        allContainer.classList.remove('allContainerChange') ;
-        allContainer.classList.add('allContainer') ;
-    },800)
+        todoModalBase.classList.remove('todoModalChange')
+        allContainer.classList.remove('shadowBlue')
+        allContainer.classList.add('shadowPurple')
+    },400)
 })
 //Animation 
 function nameAnimation () {
@@ -106,16 +111,88 @@ function nameAnimation () {
 }
 
 function openAnimation (){
+    designer.classList.remove('animate__fadeOut')
     allContainer.classList.remove('allContainer') ;
     allContainer.classList.add('allContainerChange');
+    allContainer.classList.add('shadowPurple');
     allContainer.style.filter = 'blur(0)' ;
     todoAnimation.classList.add('animate__zoomInUp')
     setTimeout(()=>{
         todoAnimation.classList.remove('hidden')
     } , 1300)
+    setTimeout(()=>{
+        designer.classList.remove('hidden')
+    } , 1300)
+    setTimeout(()=>{
+        designer.classList.add('animate__fadeIn')
+    }, 1300)
     animation.classList.remove('hidden') ,
     animation.classList.add('animate__zoomInUp')
     backBtn.classList.add('backBtn')
     closeAnimation.classList.remove('animate__zoomOutDown')
     todoSection.classList.remove('animate__zoomOutDown')
+}
+
+function closeAnimationFunc (){
+    todoAnimation.classList.remove('animate__zoomInUp')
+    animation.classList.remove('animate__zoomInUp')
+    backBtn.classList.remove('backBtn')
+    closeAnimation.classList.add('animate__zoomOutDown')
+    todoSection.classList.add('animate__zoomOutDown')
+    allContainer.classList.remove('shadowPurple')
+    setTimeout(()=>{
+        allContainer.style.filter = 'blur(3px)' ;
+        allContainer.classList.remove('allContainerChange') ;
+        allContainer.classList.add('allContainer') ;
+        designer.classList.add('hidden')
+    },800)
+    designer.classList.remove('animate__fadeIn')
+    designer.classList.add('animate__fadeOut')
+}
+categoryIcons()
+function categoryIcons(){
+    let fire = document.querySelector('.fireIcon');
+    let heart = document.querySelector('.heartIcon');
+    let tik = document.querySelector('.tikIcon');
+    let alert = document.querySelector('.alertIcon');
+    fire.addEventListener('click' , ()=>{
+        fire.classList.remove('opacity-70');
+        fire.classList.add('text-yellow-300');
+        heart.classList.add('opacity-70')
+        heart.classList.remove('text-red-700')
+        tik.classList.add('opacity-70')
+        tik.classList.remove('text-green-300')
+        alert.classList.add('opacity-70')
+        alert.classList.remove('text-pink-300')
+    })
+    heart.addEventListener('click' , ()=>{
+        heart.classList.remove('opacity-70')
+        heart.classList.add('text-red-700')
+        tik.classList.add('opacity-70')
+        tik.classList.remove('text-green-300')
+        alert.classList.add('opacity-70')
+        alert.classList.remove('text-pink-300')
+        fire.classList.add('opacity-70');
+        fire.classList.remove('text-yellow-300');
+    })
+    tik.addEventListener('click' , ()=>{
+        tik.classList.remove('opacity-70')
+        tik.classList.add('text-green-300')
+        alert.classList.add('opacity-70')
+        alert.classList.remove('text-pink-300')
+        fire.classList.add('opacity-70');
+        fire.classList.remove('text-yellow-300');
+        heart.classList.add('opacity-70')
+        heart.classList.remove('text-red-700')
+    })
+    alert.addEventListener('click' , ()=>{
+        alert.classList.remove('opacity-70')
+        alert.classList.add('text-pink-300')
+        fire.classList.add('opacity-70');
+        fire.classList.remove('text-yellow-300');
+        heart.classList.add('opacity-70')
+        heart.classList.remove('text-red-700')
+        tik.classList.add('opacity-70')
+        tik.classList.remove('text-green-300')
+    })
 }

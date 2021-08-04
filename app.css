@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
 
 .absolute-mid {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -63,27 +64,6 @@ body {
   border: 3px solid;
   border-color: #db0af7 #db0af7 #354875 #354875;
   box-shadow: 0 0 5px 2px #35487581;
-}
-
-.openBtn {
-  border: 2px solid #db0af7;
-  box-shadow: 0 0 7px#db0af7;
-  border-radius: 50%;
-  /* overflow: hidden; */
-}
-
-.openBtn :hover {
-  border-radius: 50%;
-  background-color: #db0af785;
-  box-shadow: 0 0 10px 5px#db0af73f;
-  left: 50%;
-}
-
-.jeloBtn {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.2s ease-in-out;
 }
 
 .firstName,
@@ -168,7 +148,7 @@ body {
   box-shadow: 0 0 9px #1c67d8;
 }
 .blur-sm {
-  filter: blur(2px);
+  /* filter: blur(2px); */
 }
 .todoWrapper div:nth-child() .todoWrapper {
   display: flex;
@@ -195,45 +175,72 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-.addBtn {
-  border: 2px solid #db0af7;
-  box-shadow: 0 0 7px#db0af7;
-  color: rgba(0, 0, 0, 0.767);
-  border-radius: 50%;
-  transition: 0.2s ease-in-out;
-}
-.addBtnIcon:hover {
-  border-radius: 50%;
-  background-color: #db0af73f;
-  box-shadow: 0 0 8px 7px#db0af73f;
-}
-.addBtnIcon {
-  transition: 0.2s ease-in-out;
-}
 .todoBtn {
   border-radius: 50%;
+  position: relative;
+  width: 23px;
+  height: 23px;
   border: 2px solid;
 }
 .todoBtnPurple {
-  margin-left: 3px;
+  margin-left: 8px;
   border-color: #db0af7;
   box-shadow: 0 0 5px#db0af7ad;
 }
 .todoBtnBlue {
-  margin-right: 3px;
+  margin-right: 8px;
   border-color: #1c67d8;
   box-shadow: 0 0 5px #1c67d8b7;
 }
 .RezaTm {
   text-align: center;
   margin: 0 auto;
-  display: block;
   font-size: 14px;
   left: 50%;
   transform: translateX(-50%);
   bottom: 15px;
   font-family: Rsemi;
   opacity: 70%;
+}
+
+.TodoModal {
+  position: absolute;
+  top: -47%;
+  left: 147%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 500px;
+  background-color: white;
+  transition: 0.3s ease-in-out;
+}
+.todoModalChange {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.todoModalClose {
+  position: absolute;
+  right: 2rem;
+  top: 3rem;
+  opacity: 70%;
+  transition: 0.3s ease-in-out;
+}
+.todoModalInput {
+  text-align: center;
+  margin-top: 12rem;
+  outline: none;
+  font-size: 12px;
+  overflow: hidden;
+  resize: none;
+  font-family: rmedium;
+  letter-spacing: 0.075rem;
+}
+.todoModalInput::placeholder {
+  font-size: 16px;
+  font-family: rmedium;
+}
+.newTaskBtn {
+  box-shadow: 0 0 10px #066aff;
 }
 /* js and css */
 .allContainerChange {
@@ -244,7 +251,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.8s ease-in-out;
+}
+.shadowPurple {
   box-shadow: 0 0 25px 5px #db0af78c;
+}
+.shadowBlue {
+  box-shadow: 0 0 25px 5px #066aff80;
 }
 
 .backBtn {
