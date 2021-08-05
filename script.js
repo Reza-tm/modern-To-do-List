@@ -45,7 +45,13 @@ let backBtn = document.querySelector('.closeBtnIcon')
 let frontBtn = document.querySelector('.jeloBtn')
 let closeAnimation =document.querySelector('.anime-close')
 let todoSection = document.querySelector('#todoAll')
-let designer = document.querySelector('.RezaTm')
+//category var
+let all = document.querySelector('.allIcon')
+let fire = document.querySelector('#fire');
+let heart = document.querySelector('#heart');
+let tik = document.querySelector('#tik');
+let alert = document.querySelector('#alert');
+// let designer = document.querySelector('.RezaTm')
 let todoModalBase = document.querySelector('.TodoModal')
 let  addTodoBtn = document.querySelector('.addBtnIcon')
 let  closeTodoBtn = document.querySelector('.todoModalClose')
@@ -111,7 +117,6 @@ function nameAnimation () {
 }
 
 function openAnimation (){
-    designer.classList.remove('animate__fadeOut')
     allContainer.classList.remove('allContainer') ;
     allContainer.classList.add('allContainerChange');
     allContainer.classList.add('shadowPurple');
@@ -120,12 +125,6 @@ function openAnimation (){
     setTimeout(()=>{
         todoAnimation.classList.remove('hidden')
     } , 1300)
-    setTimeout(()=>{
-        designer.classList.remove('hidden')
-    } , 1300)
-    setTimeout(()=>{
-        designer.classList.add('animate__fadeIn')
-    }, 1300)
     animation.classList.remove('hidden') ,
     animation.classList.add('animate__zoomInUp')
     backBtn.classList.add('backBtn')
@@ -144,55 +143,90 @@ function closeAnimationFunc (){
         allContainer.style.filter = 'blur(3px)' ;
         allContainer.classList.remove('allContainerChange') ;
         allContainer.classList.add('allContainer') ;
-        designer.classList.add('hidden')
     },800)
-    designer.classList.remove('animate__fadeIn')
-    designer.classList.add('animate__fadeOut')
 }
-categoryIcons()
-function categoryIcons(){
-    let fire = document.querySelector('.fireIcon');
-    let heart = document.querySelector('.heartIcon');
-    let tik = document.querySelector('.tikIcon');
-    let alert = document.querySelector('.alertIcon');
+
     fire.addEventListener('click' , ()=>{
-        fire.classList.remove('opacity-70');
-        fire.classList.add('text-yellow-300');
-        heart.classList.add('opacity-70')
-        heart.classList.remove('text-red-700')
-        tik.classList.add('opacity-70')
-        tik.classList.remove('text-green-300')
-        alert.classList.add('opacity-70')
-        alert.classList.remove('text-pink-300')
+        fire.classList.toggle('iconCheck')
     })
     heart.addEventListener('click' , ()=>{
-        heart.classList.remove('opacity-70')
-        heart.classList.add('text-red-700')
-        tik.classList.add('opacity-70')
-        tik.classList.remove('text-green-300')
-        alert.classList.add('opacity-70')
-        alert.classList.remove('text-pink-300')
-        fire.classList.add('opacity-70');
-        fire.classList.remove('text-yellow-300');
+        heart.classList.toggle('iconCheck')
     })
     tik.addEventListener('click' , ()=>{
-        tik.classList.remove('opacity-70')
-        tik.classList.add('text-green-300')
-        alert.classList.add('opacity-70')
-        alert.classList.remove('text-pink-300')
-        fire.classList.add('opacity-70');
-        fire.classList.remove('text-yellow-300');
-        heart.classList.add('opacity-70')
-        heart.classList.remove('text-red-700')
+        tik.classList.toggle('iconCheck')
     })
     alert.addEventListener('click' , ()=>{
-        alert.classList.remove('opacity-70')
-        alert.classList.add('text-pink-300')
-        fire.classList.add('opacity-70');
-        fire.classList.remove('text-yellow-300');
-        heart.classList.add('opacity-70')
-        heart.classList.remove('text-red-700')
-        tik.classList.add('opacity-70')
-        tik.classList.remove('text-green-300')
+        alert.classList.toggle('iconCheck')
     })
+    
+//------------------- ToDo selections
+//Add Todo
+let newTaskBtn = document.querySelector('.newTaskBtn')
+let newTodoInout = document.querySelector('.todoModalInput')
+let todoContainer = document.querySelector('.swiper-slide')
+let deletBtn = document.querySelector('.btn-purple')
+let checkBtn = document.querySelector('.btn-blue')
+
+
+// add listeners
+newTaskBtn.addEventListener('click' , addTodoList)
+todoContainer.addEventListener('click' , checkRemove)
+
+
+//
+ 
+function addTodoList (){
+    if(newTodoInout.value == "" || newTodoInout.value == ' '){
+        newTaskBtn.textContent="Write something" ;
+        newTaskBtn.classList.add('newTaskBtnChange')
+        console.log('یجی بنویس توش بج')
+    }else{
+    newTaskBtn.classList.remove('newTaskBtnChange')
+    newTaskBtn.textContent="New task" ;
+    let todoDiv = document.createElement('div')
+
+    if(fire.classList.contains('iconCheck')){
+        todoDiv.classList.add('interesting')
+    }else if (heart.classList.contains('iconCheck')){
+        todoDiv.classList.add('favorite')
+    }else if (tik.classList.contains('iconCheck')){
+        todoDiv.classList.add('tik')
+    }else if (alert.classList.contains('iconCheck')){
+        todoDiv.classList.add('alert')
+    }else {
+        todoDiv.classList.add('allCatecory')
+    }
+
+    todoDiv.classList.add('todotext')
+    let inputValue = newTodoInout.value ;
+    todoDiv.innerHTML = `<li class="todo rounded-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 btn-purple h-5 w-5 flex-shrink-0  cursor-pointer" viewBox="0 0 20 20" fill="#db0af7bd">
+    <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
+    </svg>
+    <p class="mx-46 todoText text-center">${inputValue}</p>
+    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 btn-blue h-5 w-5 flex-shrink-0  cursor-pointer" viewBox="0 0 20 20" fill="#1c67d8ab">
+    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+    </svg></li>`
+    //---------
+    todoContainer.appendChild(todoDiv)
+    // console.log(fireClassList)
+    // if(fire)
+    newTodoInout.value = ' '
+
+fire.classList.remove('iconCheck')
+heart.classList.remove('iconCheck')
+tik.classList.remove('iconCheck')
+ alert.classList.remove('iconCheck')
+}
+}
+
+function checkRemove (e){
+    const classList = [ ...e.target.classList]
+    const item = e.target.parentElement ;
+    console.log(item)
+    if(classList[1] === 'btn-purple'){
+        item.style.display='none'
+    }else if (classList[1] === 'btn-blue'){
+        item.classList.toggle('changeText');
+    }
 }

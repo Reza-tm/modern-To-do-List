@@ -136,6 +136,7 @@ body {
   right: 0;
   top: -2px;
 }
+
 .purple,
 .purple::after {
   background-color: #db0af7;
@@ -150,12 +151,32 @@ body {
 .blur-sm {
   /* filter: blur(2px); */
 }
-.todoWrapper div:nth-child() .todoWrapper {
-  display: flex;
+.todotext {
+  opacity: 100%;
+  transition: 0.3s ease-in-out;
 }
+.changeText {
+  opacity: 20%;
+  text-decoration: line-through;
+  text-decoration-color: #1c67d8;
+}
+
 .todo {
+  padding: 5px 2px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+  background-color: white;
   flex-shrink: 0 !important;
   margin-right: 5px !important;
+  width: 100%;
+}
+
+.todoWrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .closeBtn {
@@ -242,6 +263,14 @@ body {
 .newTaskBtn {
   box-shadow: 0 0 10px #066aff;
 }
+.newTaskBtnChange {
+  background: #ef4444;
+  box-shadow: 0 0 10px #ef44449f;
+}
+.iconCheck {
+  opacity: 100%;
+}
+
 /* js and css */
 .allContainerChange {
   background-color: #eef3fd;

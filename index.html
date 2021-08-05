@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body class="flex justify-center">
     <!-- down is place of ovh -->
@@ -80,7 +82,7 @@
 
                         <div class="categorieSelection owl-carouseeel owl-theme ml-1 mt-6"> 
 
-                            <div class="animate__animated  anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
+                            <div class="animate__animated IntestingBox  anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
                                 <p class="categoryNum opacity-40 text-xs">3 tasks</p>
                                 <p class="categoryName">Intesting</p>
                             <div class="categoryProgress bg-gray-400 mt-2 w-full rounded-full ">
@@ -88,7 +90,7 @@
                             </div>
                             </div>
 
-                        <div class="animate__animated  anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
+                        <div class="animate__animated favoriteBox  anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
                             <p class="categoryNum opacity-40 text-xs">8 tasks</p>
                             <p class="categoryName">favorite</p>
                             <div class="categoryProgress bg-gray-400 mt-2 w-full rounded-full ">
@@ -96,7 +98,7 @@
                             </div>
                         </div>
 
-                        <div class="animate__animated  anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
+                        <div class="animate__animated doneBox  anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
                             <p class="categoryNum opacity-40 text-xs">5 tasks</p>
                             <p class="categoryName">done</p>
                             <div class="categoryProgress bg-gray-400 mt-2 w-full rounded-full ">
@@ -104,7 +106,7 @@
                             </div>
                         </div> 
                         
-                        <div class="animate__animated  anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
+                        <div class="animate__animated UncompleteBox anime-close categoryBox bg-white rounded-xl  px-2 py-2 w-32  flex flex-col justify-between">
                             <p class="categoryNum opacity-40 text-xs">4 tasks</p>
                             <p class="categoryName">Uncomplete</p>
                             <div class="categoryProgress bg-gray-400 mt-2 w-full rounded-full ">
@@ -117,21 +119,23 @@
 
                 <div id="todoAll" class="todos animate__animated  todoAnime  hidden">
                     <p class="uppercase ml-1 mt-7 opacity-40">lorem tasks</p>
-                    <div class="todoWrapper owl-theme owl-carouseel  w-full flex">
-                         
-                        <div class="todo w-full bg-white mt-3 py-2 rounded-2xl flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 btn-purple h-5 w-5 flex-shrink-0  cursor-pointer" viewBox="0 0 20 20" fill="#db0af7bd">
-                                    <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
-                                  </svg>
-                            <p class="mx-2 todoText text-center">eserunt sunt in excepturi architecto eos! ipsum dolor sit, amet consectetu</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 btn-blue h-5 w-5 flex-shrink-0  cursor-pointer" viewBox="0 0 20 20" fill="#1c67d8ab">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                  </svg>
-                        </div>
+                                                <!-- Slider main container -->
+                            <div class="swiper-container mySwiper mt-3 ">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                    <ul class="swiper-slide rounded-2xl">
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                            
+                    <div class="todoWrapper overflow-hidden">
 
                     </div>
                 </div>
-                <div class="animate__animated absolute bottom-0 RezaTm hidden">Designed By <br><a href="">Reza-Tm</a></div>
+                <!-- <div class="animate__animated absolute bottom-0 RezaTm hidden">Designed By <br><a href="">Reza-Tm</a></div> -->
 
                 
                         <svg xmlns="http://www.w3.org/2000/svg" class="closeBtnIcon  h-6 w-6 absolute top-6 " viewBox="0 0 20 20" fill="currentColor">
@@ -157,35 +161,41 @@
                 </div>
 
                 <div class="text-center w-full  ">
-                    <textarea spellcheck="false" placeholder="Enter your task" name="textarea" class=" p-3 rounded-3xl todoModalInput h-20 w-full"></textarea>
+                    <textarea spellcheck="false" placeholder="Enter your task" name="textarea" class=" p-3 
+                    rounded-3xl todoModalInput h-20 w-full"></textarea>
                 </div>
 
                 <div class="todoModalCategory flex justify-around mt-8">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="modalIcon h-5 w-5 mr-5 allIcon transition " fill="none" viewBox="0 0 24 24" stroke="#8B5CF6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                          </svg>
+                    </div>
                     <div>       
-                        <svg xmlns="http://www.w3.org/2000/svg" class="modalIcon opacity-70 h-5 w-5 mr-5 fireIcon transition hover:text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="fire" class="modalIcon opacity-30 h-5 w-5 mr-5 fireIcon transition text-yellow-300 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
                           </svg>
                     </div>
                     <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="modalIcon opacity-70 h-5 w-5 mr-5 heartIcon transition hover:text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="heart" class="modalIcon opacity-30 h-5 w-5 mr-5 heartIcon transition text-red-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                      </div>
                     <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="modalIcon opacity-70 h-5 w-5 mr-5 tikIcon transition hover:text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="tik" class="modalIcon opacity-30 h-5 w-5 mr-5 tikIcon transition text-green-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                           </svg>
                     </div>
                     <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="modalIcon opacity-70 h-5 w-5 alertIcon transition hover:text-pink-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="alert" class="modalIcon opacity-30 h-5 w-5 alertIcon transition text-pink-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                         </svg>
                     </div>
                 </div>
 
                 <div class="mt-20">
-                    <button class="text-sm rounded-3xl text-white py-2 px-5 bg-blue-600 newTaskBtn">New task</button>
+                    <button type="submit" class="text-sm rounded-3xl text-white py-2 px-5 bg-blue-600 newTaskBtn">New task</button>
                 </div>
             </div>
 
@@ -199,6 +209,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+      </script>
     <script src="script.js"></script>
     <script src="mamad.js"></script>
 </body>
