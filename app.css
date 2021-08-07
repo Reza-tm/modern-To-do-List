@@ -80,8 +80,6 @@ body {
   font-family: rsemi;
 }
 
-/* all container */
-
 .allContainer {
   background-color: #eef3fd;
   width: 250px;
@@ -125,38 +123,43 @@ body {
 .progressFull {
   position: relative;
   height: 100%;
-  border-radius: 100%;
-}
-.progressFull::after {
-  content: "";
-  height: 3px;
-  width: 2px;
-  display: flex;
-  position: absolute;
-  right: 0;
-  top: -2px;
 }
 
-.purple,
-.purple::after {
-  background-color: #db0af7;
-  box-shadow: 0 0 8px #db0af7;
+.purple {
+  opacity: 85%;
+  background-color: #8b5cf6;
+  box-shadow: 0 0 8px #8b5cf6;
+}
+.red {
+  opacity: 85%;
+  background-color: #f26767;
+  box-shadow: 0 0 9px #f26767;
+}
+.green {
+  opacity: 85%;
+  background-color: #10b981;
+  box-shadow: 0 0 9px #10b981;
+}
+.pink {
+  opacity: 85%;
+  background-color: #f075b2;
+  box-shadow: 0 0 9px #f075b2;
+}
+.yellow {
+  opacity: 85%;
+  background-color: #fcd34d;
+  box-shadow: 0 0 9px #fcd34d;
 }
 
-.blue,
-.blue::after {
-  background-color: #1c67d8;
-  box-shadow: 0 0 9px #1c67d8;
-}
 .blur-sm {
-  /* filter: blur(2px); */
+  filter: blur(2px);
 }
 .todotext {
   opacity: 100%;
   transition: 0.3s ease-in-out;
 }
 .changeText {
-  opacity: 20%;
+  opacity: 60%;
   text-decoration: line-through;
   text-decoration-color: #1c67d8;
 }
